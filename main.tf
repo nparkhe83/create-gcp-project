@@ -8,7 +8,8 @@ resource "random_id" "random" {
 }
 
 locals {
-  project_id = "poc-${random_id.random.hex}"
+  project_id              = "poc-${random_id.random.hex}"
+  poc_storage_bucket_name = "poc-tfstate-bucket-${random_id.random.hex}"
 }
 
 resource "google_project" "poc" {
