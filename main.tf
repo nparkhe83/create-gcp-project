@@ -8,11 +8,11 @@ resource "random_id" "random" {
 }
 
 locals {
-  project_id          = "jsd-${random_id.random.hex}"
-  storage_bucket_name = "jsd-storage-bucket-${random_id.random.hex}"
+  project_id              = "poc-${random_id.random.hex}"
+  poc_storage_bucket_name = "poc-tfstate-bucket-${random_id.random.hex}"
 }
 
-resource "google_project" "jsd" {
+resource "google_project" "poc" {
   // Create Google Project to create infra for cloudskillboost labs
 
   name                = "Nilesh-PoC"
@@ -26,5 +26,5 @@ resource "google_project_service" "compute_API" {
   service = "compute.googleapis.com"
   project = local.project_id
 
-  depends_on = [google_project.jsd]
+  depends_on = [google_project.poc]
 }
