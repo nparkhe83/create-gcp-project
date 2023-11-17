@@ -1,3 +1,10 @@
+terraform {
+  backend "gcs" {
+    bucket = "admin-tfstate-bucket"
+    prefix = "terraform/state"
+  }
+}
+
 provider "google" {
   project = "admin-nilesh"
   region  = "us-central1"
