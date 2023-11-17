@@ -1,4 +1,3 @@
-
 resource "google_storage_bucket" "admin-tfstate-bucket" {
   name          = "admin-tfstate-bucket"
   location      = "US"
@@ -10,7 +9,6 @@ resource "google_storage_bucket" "admin-tfstate-bucket" {
   }
 }
 
-
 resource "google_storage_bucket" "poc-tfstate-bucket" {
   name          = local.poc_storage_bucket_name
   location      = "US"
@@ -21,4 +19,3 @@ resource "google_storage_bucket" "poc-tfstate-bucket" {
     enabled = true
   }
 }
-

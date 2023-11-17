@@ -21,7 +21,6 @@ locals {
 
 resource "google_project" "poc" {
   // Create Google Project to create infra for cloudskillboost labs
-
   name                = "Nilesh-PoC"
   project_id          = local.project_id
   auto_create_network = false
