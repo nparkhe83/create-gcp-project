@@ -7,13 +7,12 @@ This is my personal setup to deploy PoC projects quickly and streamline cleanup.
 1. Organised Deployment of PoCs
 2. Cron tasks to schedule cleanup resources created in the PoC.
 3. Use Remote backends so that others can try this with their own setup.
-   <br>
 
 <br>
 
 #### Instructions:
 
-Add GCP_BILLING_ACCOUNT_ID to project with following command.
+Overwrite GCP_BILLING_ACCOUNT_ID for project with following command. Replace GCP_BILLING_ACCOUNT_ID with your billing account.
 
 ```
 cat > terraform.tfvars<< EOF
@@ -87,3 +86,7 @@ $ terraform output
 
 </details>
 <br>
+
+#### Miscellaneous:
+
+Enable Git hooks by executing bash script in the script.sh file

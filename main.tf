@@ -1,3 +1,10 @@
+terraform {
+  backend "gcs" {
+    bucket = "admin-tfstate-bucket"
+    prefix = "terraform/state"
+  }
+}
+
 provider "google" {
   project = "admin-nilesh"
   region  = "us-central1"
@@ -14,7 +21,6 @@ locals {
 
 resource "google_project" "poc" {
   // Create Google Project to create infra for cloudskillboost labs
-
   name                = "Nilesh-PoC"
   project_id          = local.project_id
   auto_create_network = false
