@@ -86,3 +86,7 @@ $ terraform output
 
 </details>
 <br>
+
+#### Miscellaneous:
+
+Enable Git hooks by executing bash script in the script.sh file

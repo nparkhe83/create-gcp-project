@@ -1,0 +1,11 @@
+#!/bin/bash
+
+commit_message_file="$1"
+echo "commit message file: $commit_message_file"
+commit_message=$(cat "$commit_message_file")
+echo "commit message: $commit_message"
+
+if [[ ! $commit_message =~ ^JSD ]]; then
+	echo "Commit message must start with 'JSD'"
+	exit 1
+fi
